@@ -1,0 +1,37 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Appoinment</title>
+    {% tailwind_css %}
+</head>
+
+<body>
+    <!-- Include the Navbar -->
+    {% include 'navbar.html' %}
+    
+    <div class="container mx-auto mt-10 p-6 bg-white rounded-lg shadow-md max-w-md">
+        <h1 class="text-2xl mb-6">Create a New Appointment</h1>
+
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <div class="space-y-2">
+                {{ form.as_p }}
+            </div>
+
+            <div class=mt-6>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Create Appoinment
+                </button>
+            </div>
+        </form>
+
+        <div class="mt-6">
+            <a href="{% url 'home' %}" class="text-blue-400 hover:underline">Go back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
