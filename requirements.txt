@@ -13,7 +13,7 @@ click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.3.0
 cookiecutter==2.3.0
-Django==4.2.5
+Django==4.2.7
 django-browser-reload==1.11.0
 django-tailwind==3.6.0
 idna==3.4
